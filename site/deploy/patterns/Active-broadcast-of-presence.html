@@ -104,9 +104,219 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
 <a href="/categories/location" class="location">location</a>
            &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<a href="/categories/mobile" class="mobile">mobile</a>
+           &bull; 
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -145,6 +355,96 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
       
         
@@ -156,9 +456,99 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
-<a href="/categories/mobile" class="mobile">mobile</a>
+<a href="/categories/choose" class="choose">choose</a>
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -185,38 +575,90 @@
 	
 
 	<div class="toc"><span class="toctitle">Contents</span><ul>
-<li><a href="#intent">Intent</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#context">Context</a></li>
 <li><a href="#problem">Problem</a></li>
-<li><a href="#solution">Solution</a><ul>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#foursquare-check-in-model">Foursquare check-in&nbsp;model</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#forcesconcerns">Forces/Concerns</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#examples">Examples</a></li>
 </ul>
 </div>
-<h2 id="intent"><a class="toclink" href="#intent">Intent</a></h2>
+<!--###[Also Known As]-->
+
+<!-- All other names the pattern is known by.-->
+
+<h2 id="summary"><a class="toclink" href="#summary">Summary</a></h2>
+<!-- One short paragraph summarising the pattern.-->
+
+<p>Users may choose actively when they want to share presence information, to increase both the relevance of, and control over,&nbsp;sharing.</p>
+<!--intent-->
+
 <p>Enable sharing of location or presence data where the user controls the timing and&nbsp;context.</p>
 <p>Supports <a href="User-control">user control</a> and <a href="Appropriateness">appropriateness</a>.</p>
 <h2 id="context"><a class="toclink" href="#context">Context</a></h2>
+<!-- The situations in which the pattern may apply.-->
+
 <p>When a user wants to share or broadcast location or other presence data that is contextually relevant and a full stream of data may be either noisy or&nbsp;intrusive.</p>
 <h2 id="problem"><a class="toclink" href="#problem">Problem</a></h2>
+<!-- The problem a pattern addresses, including a list of forces describing why a problem might be difficult to solve.-->
+
 <p>How can a system broadcast a user's presence or location information to a social network without revealing sensitive locations or location histories or overwhelming recipients with noisy&nbsp;data?</p>
-<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
-<p>While sharing access controls may allow constant access, only <em>broadcast</em> presence information at the active choice of the&nbsp;user. </p>
-<h3 id="examples"><a class="toclink" href="#examples">Examples</a></h3>
-<h4 id="foursquare-check-in-model"><a class="toclink" href="#foursquare-check-in-model">Foursquare check-in&nbsp;model</a></h4>
-<h2 id="forcesconcerns"><a class="toclink" href="#forcesconcerns">Forces/Concerns</a></h2>
+<!--forces/concerns-->
+
 <p>Always requiring active decision-making can burden the user with&nbsp;choices.</p>
+<h2 id="solution"><a class="toclink" href="#solution">Solution</a></h2>
+<!-- A concise description of how the pattern addresses the problem.-->
+
+<p>While sharing access controls may allow constant access, only <em>broadcast</em> presence information at the active choice of the&nbsp;user. </p>
+<!--###[Structure]-->
+
+<!--A detailed specification of the structural aspects of the pattern. A class diagram if applicable.-->
+
+<!--###[Implementation]-->
+
+<!--Guidelines for implementing the pattern; code fragments; suggested PETS; policy fragments.-->
+
+<!--##Consequences-->
+
+<!--The advantages (benefits) and disadvantages (liabilities) of applying the pattern.-->
+
+<!--###[Constraints]-->
+
+<!-- limitations as a consequence of applying the pattern.-->
+
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<!--Motivational example to see how the pattern is applied.-->
+
+<ul>
+<li>Foursquare check-in&nbsp;model</li>
+</ul>
+<!--###[Known Uses]-->
+
+<!-- Pointers to various applications of the pattern.-->
+
+<!--##See Also-->
+
+<!-- Any pointers to relevant information, not contained in the subfields below.-->
+
+<!--###[Related Patterns]-->
+
+<!-- Supporting and conflicting patterns-->
+
+<!--###[Sources]-->
+
+<!-- References to the original source of the pattern.-->
+
+<!--##General Comments-->
+
+<!-- Separate discussion on the pattern.-->
+
+<!--##Tags-->
+
+<!-- User definable descriptors for additional correlation.-->
 
 	
 	
   <p id="comments_link">
-    Questions or comments? Email Nick Doty at <a href="mailto:npdoty@ischool.berkeley.edu" title="Email Nick Doty">npdoty@ischool.berkeley.edu</a>.
-    <br />Corrections or additions? <a href="https://github.com/m0hit/privacypatterns/wiki/Active-broadcast-of-presence" target="_blank">Contribute via Github!</a>
+    Corrections or additions? <a href="https://github.com/privacypatterns/patterns/blob/master/patterns/Active-broadcast-of-presence.md" target="_blank">Contribute on GitHub.</a>
   </p>
   
 
@@ -224,7 +666,7 @@
   <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'privacypatterns';
-      var disqus_developer = 1; // Remove this when going live
+      // var disqus_developer = 1; // Remove this when going live
 
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
@@ -244,7 +686,7 @@
 	<p>
 		<a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
 		Privacy patterns are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>.
-	<br>Contribute at <a href="https://github.com/m0hit/privacypatterns">github</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
+	<br>Contribute on <a href="https://github.com/privacypatterns">GitHub</a>. Read our <a href="/about/policy" title="Privacy Policy">privacy and contribution policy</a>.
 	</p>
 	<p class="berkeley">UC Berkeley <img id="iman" src="/media/images/I_School_logo_i.png" height="30px" /> School of Information</p> 
 </footer>

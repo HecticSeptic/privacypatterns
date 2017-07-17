@@ -1,20 +1,26 @@
 SHELL := /bin/bash
-.PHONY: build wiki-clone docker static
+SOURCE_PATTERNS_REPO:=https://github.com/privacypatterns/patterns
+PATTERNS_REPO ?= $(SOURCE_PATTERNS_REPO)
+PP_PORT ?= 8080
 
+.PHONY: build docker static sync
 build: ./site/content/patterns
 static: ./site/deploy
 
-docker:
-	@docker build .
+docker: ./site/deploy ./site/deploy/changes
+	@docker build . -t tmp/privacypatterns:local
 
-./privacypatterns.wiki: wiki-clone
-	@echo "Updating content from wiki"
-	@[ -d $@ ] || git clone https://github.com/privacypatterns/$@.git
-	@cd $@ && git checkout master && git pull
+sync: ./patterns
+	@echo "Updating content from $(SOURCE_PATTERNS_REPO)"
+	@cd ./patterns && git checkout master && git pull
 
-./site/content/patterns: ./privacypatterns.wiki
+./patterns:
+	@echo "Cloning content from $(SOURCE_PATTERNS_REPO)"
+	@[ -d ./patterns ] || git clone $(SOURCE_PATTERNS_REPO)
+
+./site/content/patterns: ./patterns ./site/content/patterns/index.html ./site/layout/*
 	@echo "Generating static files"
-	@python markdown_to_hyde.py -s ./privacypatterns.wiki -d ./site/content/
+	@python markdown_to_hyde.py -s ./patterns -d ./site/content/
 
 ./hyde/hyde.py:
 	@echo "Getting hyde"
@@ -24,3 +30,11 @@ docker:
 
 ./site/deploy: ./hyde/hyde.py $(shell find ./site/content/patterns)
 	@python ./hyde/hyde.py -g -s ./site
+
+./site/deploy/changes: ./site/deploy
+	@git log --pretty=short -n3 > $@
+	@echo "===================" >> $@
+
+run: docker
+	@echo "Running privacypatterns on port $(PP_PORT)"
+	@docker run -it -p $(PP_PORT):80 tmp/privacypatterns:local
