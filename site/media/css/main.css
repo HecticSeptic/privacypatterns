@@ -267,7 +267,7 @@ ul#cats a:hover {
   background-size: 24px;
   /*padding: .5em; interferes with linear-gradient*/
   margin-bottom: 1em;
-  padding-left: 40px;
+  padding-left: 28px;
 }
 #cats .notice { background-image: url('/media/images/categories/notice.png'); }
 #cats .minimization { background-image: url('/media/images/categories/default.png'); }
@@ -386,7 +386,7 @@ td > a > img { /* Make sure that linked images in a cell do not make the cell bi
 
 /* Categories list on individual pattern pages */
 p#cats a { /* same as non p, prevents colored margins */
-  background-size: 24px;
+  background-size: 12px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
